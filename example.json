@@ -1,0 +1,163 @@
+[
+    {
+      "user_name": "食間旅攝Sion",
+      "comment": "南區長青學苑在這裡舉辦畢業典禮，以及成果發表會。",
+      "rating": "4",
+      "emotion_classification": "positive",
+      "emotion_score": [
+        0.49319133162498474,
+        -0.5221096873283386
+      ]
+    },
+    {
+      "user_name": "jason chen",
+      "comment": "通識課輕輕鬆鬆\n不過下大雨時屋頂會有水噴進來",
+      "rating": "4",
+      "emotion_classification": "negative",
+      "emotion_score": [
+        -2.0334317684173584,
+        2.094545364379883
+      ]
+    },
+    {
+      "user_name": "Henry",
+      "comment": "帶老婆小孩回母校散步!  沒想到一轉眼我已畢業21年了，好懷念學生時代在綜合大樓唸書的日子。",
+      "rating": "5",
+      "emotion_classification": "positive",
+      "emotion_score": [
+        0.2371489405632019,
+        -0.2264348566532135
+      ]
+    },
+    {
+      "user_name": "Constantine Niya",
+      "comment": "跨領域老師教導淺顯易懂，感謝老師們👏♥️ …",
+      "rating": "5",
+      "emotion_classification": "positive",
+      "emotion_score": [
+        1.5742945671081543,
+        -1.7643104791641235
+      ]
+    },
+    {
+      "user_name": "Darren Cai",
+      "comment": "2022年第一季（Q1）在此上課。",
+      "rating": "4",
+      "emotion_classification": "negative",
+      "emotion_score": [
+        -1.105507493019104,
+        1.3352316617965698
+      ]
+    },
+    {
+      "user_name": "Oliver happy Oliver",
+      "comment": "👍👍 …",
+      "rating": "5",
+      "emotion_classification": "",
+      "emotion_score": ""
+    },
+    {
+      "user_name": "W. J. C",
+      "comment": "上課.考試的地方😆😆😆 …",
+      "rating": "4",
+      "emotion_classification": "negative",
+      "emotion_score": [
+        -1.3587368726730347,
+        1.6204110383987427
+      ]
+    },
+    {
+      "user_name": "劉俊佑",
+      "comment": "美麗的",
+      "rating": "5",
+      "emotion_classification": "positive",
+      "emotion_score": [
+        2.006598711013794,
+        -1.8209704160690308
+      ]
+    },
+    {
+      "user_name": "Lu",
+      "comment": "",
+      "rating": "5",
+      "emotion_classification": "",
+      "emotion_score": ""
+    },
+    {
+      "user_name": "Chris Lee",
+      "comment": "",
+      "rating": "4",
+      "emotion_classification": "",
+      "emotion_score": ""
+    },
+    {
+      "user_name": "皮豆",
+      "comment": "",
+      "rating": "5",
+      "emotion_classification": "",
+      "emotion_score": ""
+    },
+    {
+      "user_name": "林予喬",
+      "comment": "",
+      "rating": "5",
+      "emotion_classification": "",
+      "emotion_score": ""
+    },
+    {
+      "user_name": "Terry Lee",
+      "comment": "",
+      "rating": "3",
+      "emotion_classification": "",
+      "emotion_score": ""
+    },
+    {
+      "user_name": "Kevin",
+      "comment": "",
+      "rating": "5",
+      "emotion_classification": "",
+      "emotion_score": ""
+    },
+    {
+      "user_name": "jia jang Wen",
+      "comment": "",
+      "rating": "5",
+      "emotion_classification": "",
+      "emotion_score": ""
+    },
+    {
+      "user_name": "CT C",
+      "comment": "",
+      "rating": "3",
+      "emotion_classification": "",
+      "emotion_score": ""
+    },
+    {
+      "user_name": "CHANG AKI",
+      "comment": "",
+      "rating": "5",
+      "emotion_classification": "",
+      "emotion_score": ""
+    },
+    {
+      "user_name": "Benson K",
+      "comment": "",
+      "rating": "4",
+      "emotion_classification": "",
+      "emotion_score": ""
+    },
+    {
+      "user_name": "林聖凱",
+      "comment": "",
+      "rating": "4",
+      "emotion_classification": "",
+      "emotion_score": ""
+    },
+    {
+      "user_name": "ShihKu Hsiao",
+      "comment": "",
+      "rating": "5",
+      "emotion_classification": "",
+      "emotion_score": ""
+    }
+  ]
