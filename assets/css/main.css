@@ -1916,11 +1916,19 @@ section {
 
 /* -----我寫的----- */
 
-.comment {
-  word-wrap: break-word;
-  word-break: break-all;
-}
-
 .review {
   width: 85%;
+  height: 100%;
+}
+
+.not-comment {
+  flex: 0 0 auto;
+  height: 25%;
+}
+
+.comment {
+  flex: 0 0 auto;
+  height: 50%;
+  word-wrap: break-word;
+  word-break: break-all;
 }

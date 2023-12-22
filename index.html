@@ -42,7 +42,7 @@
 
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between not-comment">
 
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
@@ -60,43 +60,32 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="hero d-flex align-items-center">
     <div class="container">
-      <div class="row gy-4 d-flex justify-content-between">
+      <div class="row gy-4 d-flex justify-content-between not-comment">
         <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
           <h2 data-aos="fade-up">評論分析系統</h2>
           <p data-aos="fade-up" data-aos-delay="100">我們將分析店家的評論內容</p>
 
           <form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
-            <input type="text" class="form-control" placeholder="想分析哪間商家？">
-            <button type="submit" class="btn btn-primary" >分析</button>
+            <input id="input" type="text" class="form-control" placeholder="想分析哪間商家？">
+            <button id="button" type="submit" class="btn btn-primary" >分析</button>
           </form>
 
-          <div class="row gy-4" data-aos="fade-up" data-aos-delay="400">
+          <div id="rating_area" class="row gy-4 d-none" data-aos="fade-up" data-aos-delay="400">
 
             <div class="col-lg-3 col-6">
               <div class="stats-item text-center w-100 h-100">
-                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Clients</p>
+                <span id="GOOGLE_rating"></span>
+                <p id="GOOGLE_name"></p>
               </div>
             </div><!-- End Stats Item -->
 
             <div class="col-lg-3 col-6">
-              <div class="stats-item text-center w-100 h-100">
-                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Projects</p>
-              </div>
             </div><!-- End Stats Item -->
 
             <div class="col-lg-3 col-6">
               <div class="stats-item text-center w-100 h-100">
-                <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Support</p>
-              </div>
-            </div><!-- End Stats Item -->
-
-            <div class="col-lg-3 col-6">
-              <div class="stats-item text-center w-100 h-100">
-                <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Workers</p>
+                <span id="NEW_rating"></span>
+                <p id="NEW_name"></p>
               </div>
             </div><!-- End Stats Item -->
 
@@ -113,53 +102,53 @@
 
   <main id="main">
 
-    <section id="horizontal-pricing" class="horizontal-pricing pt-0">
+    <section id="horizontal-pricing" class="horizontal-pricing pt-0 d-none">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <span>這些好吃的...</span>
-          <h2>你可能想吃...</h2>
+          <span>大家這麼說...</span>
+          <h2>大家這麼說...</h2>
         </div>
 
         <div class="row gy-4 pricing-item" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-3 d-flex align-items-center justify-content-center">
             <ul class="review">
-              <li class="justify-content-between">
-                <h5 id="user_1-user_name"><strong>使用者</strong></h5>
-                <h5 id="user_1-emotion_classification">&#128512</h5>
+              <li class="justify-content-between not-comment">
+                <h5 id="user_0-user_name"></h5>
+                <h5 id="user_0-emotion_classification"></h5>
               </li>
-              <li id="user_1-rating">修正後的分數</li>
-              <li id="user_1-comment" class="comment">評論11111111111111111111111111111</li>
+              <h5 id="user_0-rating" class="not-comment"></h5>
+              <h5 id="user_0-comment" class="comment"></h5>
             </ul>
           </div>
           <div class="col-lg-3 d-flex align-items-center justify-content-center">
             <ul class="review">
-              <li class="justify-content-between">
-                <h5 id="user_1-user_name"><strong>使用者</strong></h5>
-                <h5 id="user_1-emotion_classification">&#128512</h5>
+              <li class="justify-content-between not-comment">
+                <h5 id="user_1-user_name"></h5>
+                <h5 id="user_1-emotion_classification"></h5>
               </li>
-              <li id="user_1-rating">修正後的分數</li>
-              <li id="user_1-comment" class="comment">評論11111111111111111111111111111</li>
+              <h5 id="user_1-rating" class="not-comment"></h5>
+              <h5 id="user_1-comment" class="comment"></h5>
             </ul>
           </div>
           <div class="col-lg-3 d-flex align-items-center justify-content-center">
             <ul class="review">
-              <li class="justify-content-between">
-                <h5 id="user_1-user_name"><strong>使用者</strong></h5>
-                <h5 id="user_1-emotion_classification">&#128512</h5>
+              <li class="justify-content-between not-comment">
+                <h5 id="user_2-user_name"></h5>
+                <h5 id="user_2-emotion_classification"></h5>
               </li>
-              <li id="user_1-rating">修正後的分數</li>
-              <li id="user_1-comment" class="comment">評論11111111111111111111111111111</li>
+              <h5 id="user_2-rating" class="not-comment"></h5>
+              <h5 id="user_2-comment" class="comment"></h5>
             </ul>
           </div>
           <div class="col-lg-3 d-flex align-items-center justify-content-center">
             <ul class="review">
-              <li class="justify-content-between">
-                <h5 id="user_1-user_name"><strong>使用者</strong></h5>
-                <h5 id="user_1-emotion_classification">&#128512</h5>
+              <li class="justify-content-between not-comment">
+                <h5 id="user_3-user_name"></h5>
+                <h5 id="user_3-emotion_classification"></h5>
               </li>
-              <li id="user_1-rating">修正後的分數</li>
-              <li id="user_1-comment" class="comment">評論11111111111111111111111111111</li>
+              <h5 id="user_3-rating" class="not-comment"></h5>
+              <h5 id="user_3-comment" class="comment"></h5>
             </ul>
           </div>
         </div><!-- End Pricing Item -->
@@ -167,42 +156,42 @@
         <div class="row gy-4 pricing-item featured mt-4" data-aos="fade-up" data-aos-delay="200">
           <div class="col-lg-3 d-flex align-items-center justify-content-center">
             <ul class="review">
-              <li class="justify-content-between">
-                <h5 id="user_1-user_name"><strong>使用者</strong></h5>
-                <h5 id="user_1-emotion_classification">&#128512</h5>
+              <li class="justify-content-between not-comment">
+                <h5 id="user_4-user_name"></h5>
+                <h5 id="user_4-emotion_classification"></h5>
               </li>
-              <li id="user_1-rating">修正後的分數</li>
-              <li id="user_1-comment" class="comment">評論11111111111111111111111111111</li>
+              <h5 id="user_4-rating" class="not-comment"></h5>
+              <h5 id="user_4-comment" class="comment"></h5>
             </ul>
           </div>
           <div class="col-lg-3 d-flex align-items-center justify-content-center">
             <ul class="review">
-              <li class="justify-content-between">
-                <h5 id="user_1-user_name"><strong>使用者</strong></h5>
-                <h5 id="user_1-emotion_classification">&#128512</h5>
+              <li class="justify-content-between not-comment">
+                <h5 id="user_5-user_name"></h5>
+                <h5 id="user_5-emotion_classification"></h5>
               </li>
-              <li id="user_1-rating">修正後的分數</li>
-              <li id="user_1-comment" class="comment">評論11111111111111111111111111111</li>
+              <h5 id="user_5-rating" class="not-comment"></h5>
+              <h5 id="user_5-comment" class="comment"></h5>
             </ul>
           </div>
           <div class="col-lg-3 d-flex align-items-center justify-content-center">
             <ul class="review">
-              <li class="justify-content-between">
-                <h5 id="user_1-user_name"><strong>使用者</strong></h5>
-                <h5 id="user_1-emotion_classification">&#128512</h5>
+              <li class="justify-content-between not-comment">
+                <h5 id="user_6-user_name"></h5>
+                <h5 id="user_6-emotion_classification"></h5>
               </li>
-              <li id="user_1-rating">修正後的分數</li>
-              <li id="user_1-comment" class="comment">評論11111111111111111111111111111</li>
+              <h5 id="user_6-rating" class="not-comment"></h5>
+              <h5 id="user_6-comment" class="comment"></h5>
             </ul>
           </div>
           <div class="col-lg-3 d-flex align-items-center justify-content-center">
             <ul class="review">
-              <li class="justify-content-between">
-                <h5 id="user_1-user_name"><strong>使用者</strong></h5>
-                <h5 id="user_1-emotion_classification">&#128512</h5>
+              <li class="justify-content-between not-comment">
+                <h5 id="user_7-user_name"></h5>
+                <h5 id="user_7-emotion_classification"></h5>
               </li>
-              <li id="user_1-rating">修正後的分數</li>
-              <li id="user_1-comment" class="comment">評論11111111111111111111111111111</li>
+              <h5 id="user_7-rating" class="not-comment"></h5>
+              <h5 id="user_7-comment" class="comment"></h5>
             </ul>
           </div>
         </div><!-- End Pricing Item -->
@@ -211,42 +200,42 @@
         
           <div class="col-lg-3 d-flex align-items-center justify-content-center">
             <ul class="review">
-              <li class="justify-content-between">
-                <h5 id="user_1-user_name"><strong>使用者</strong></h5>
-                <h5 id="user_1-emotion_classification">&#128512</h5>
+              <li class="justify-content-between not-comment">
+                <h5 id="user_8-user_name"></h5>
+                <h5 id="user_8-emotion_classification"></h5>
               </li>
-              <li id="user_1-rating">修正後的分數</li>
-              <li id="user_1-comment" class="comment">評論11111111111111111111111111111</li>
+              <h5 id="user_8-rating" class="not-comment"></h5>
+              <h5 id="user_8-comment" class="comment"></h5>
             </ul>
           </div>
           <div class="col-lg-3 d-flex align-items-center justify-content-center">
             <ul class="review">
-              <li class="justify-content-between">
-                <h5 id="user_1-user_name"><strong>使用者</strong></h5>
-                <h5 id="user_1-emotion_classification">&#128512</h5>
+              <li class="justify-content-between not-comment">
+                <h5 id="user_9-user_name"></h5>
+                <h5 id="user_9-emotion_classification"></h5>
               </li>
-              <li id="user_1-rating">修正後的分數</li>
-              <li id="user_1-comment" class="comment">評論11111111111111111111111111111</li>
+              <h5 id="user_9-rating" class="not-comment"></h5>
+              <h5 id="user_9-comment" class="comment"></h5>
             </ul>
           </div>
           <div class="col-lg-3 d-flex align-items-center justify-content-center">
             <ul class="review">
-              <li class="justify-content-between">
-                <h5 id="user_1-user_name"><strong>使用者</strong></h5>
-                <h5 id="user_1-emotion_classification">&#128512</h5>
+              <li class="justify-content-between not-comment">
+                <h5 id="user_10-user_name"></h5>
+                <h5 id="user_10-emotion_classification"></h5>
               </li>
-              <li id="user_1-rating">修正後的分數</li>
-              <li id="user_1-comment" class="comment">評論11111111111111111111111111111</li>
+              <h5 id="user_10-rating" class="not-comment"></h5>
+              <h5 id="user_10-comment" class="comment"></h5>
             </ul>
           </div>
           <div class="col-lg-3 d-flex align-items-center justify-content-center">
             <ul class="review">
-              <li class="justify-content-between">
-                <h5 id="user_1-user_name"><strong>使用者</strong></h5>
-                <h5 id="user_1-emotion_classification">&#128512</h5>
+              <li class="justify-content-between not-comment">
+                <h5 id="user_11-user_name"></h5>
+                <h5 id="user_11-emotion_classification"></h5>
               </li>
-              <li id="user_1-rating">修正後的分數</li>
-              <li id="user_1-comment" class="comment">評論11111111111111111111111111111</li>
+              <h5 id="user_11-rating" class="not-comment"></h5>
+              <h5 id="user_11-comment" class="comment"></h5>
             </ul>
           </div>
         </div><!-- End Pricing Item -->
@@ -334,7 +323,7 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=3"></script>
 
 </body>
 
