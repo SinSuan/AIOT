@@ -196,7 +196,7 @@ function new_rating(rating, emotion_classification) {
     console.log("enter 6")
     newRating = parseInt(rating) + parseInt(diration);
   }
-  
+
   // console.log("new rating is " + newRating)
 
   return newRating;
@@ -253,44 +253,63 @@ clickButton.addEventListener('click', function () {
 
   if (messageText.trim() !== "") {
 
-    fetch("./example.json").then((res) => {
+    let headers = {
+      "Accept": "application/json",
+      "Content-Type": "application/json"
+    }
 
-      data = res.json();
-      return data;
+    let body = {
+      "url": messageText
+    }
 
-    }).then((data) => {
+    fetch("http://140.120.182.90:11144/analyze", {
+      headers: headers,
+      method: "post",
+      body: JSON.stringify(body)
+    })
+      .then((res) => {
 
-      for (let ind_review = 0; ind_review < 12; ind_review++) {
-        assign_review(data[ind_review], ind_review);
-      }
+        data = res.json();
+        // console.log("data is ");
+        // console.log(res);
+        return data;
 
-      const total_rating = data.map(json => json.rating);
-      const modified_rating = data.map(json => new_rating(json[`rating`], json[`emotion_classification`]));
-      const num_rating = total_rating.length
+      }).then((data) => {
+        data = data.comment;
+        // console.log(data);
+        for (let ind_review = 0; ind_review < 12; ind_review++) {
+          assign_review(data[ind_review], ind_review);
+        }
 
-      console.log(`num_rating = ${num_rating}`);
+        const total_rating = data.map(json => json.rating);
+        const modified_rating = data.map(json => new_rating(json[`rating`], json[`emotion_classification`]));
+        const num_rating = total_rating.length
 
-      let Google_rating = total_rating.reduce((accumulator, currentValue) => accumulator + parseFloat(currentValue), 0);
-      Google_rating = Google_rating / parseFloat(num_rating);
-      const GOOGLE_rating = document.getElementById("GOOGLE_rating");
-      GOOGLE_rating.innerHTML = Google_rating.toString();
-      const GOOGLE_name = document.getElementById("GOOGLE_name");
-      GOOGLE_name.innerHTML = "Google Rating";
+        console.log(`num_rating = ${num_rating}`);
 
-      // let total_New_rating = total_rating.forEach(new_rating);
-      console.log(`modified_rating = ${modified_rating}`);
-      let New_rating = modified_rating.reduce((accumulator, currentValue) => accumulator + parseFloat(currentValue), 0);
-      New_rating = New_rating / parseFloat(num_rating);
-      const NEW_rating = document.getElementById("NEW_rating");
-      NEW_rating.innerHTML = New_rating;
-      const NEW_name = document.getElementById("NEW_name");
-      NEW_name.innerHTML = "New Rating";
+        let Google_rating = total_rating.reduce((accumulator, currentValue) => accumulator + parseFloat(currentValue), 0);
+        Google_rating = Google_rating / parseFloat(num_rating);
+        Google_rating = Google_rating.toFixed(1);
+        const GOOGLE_rating = document.getElementById("GOOGLE_rating");
+        GOOGLE_rating.innerHTML = Google_rating.toString();
+        const GOOGLE_name = document.getElementById("GOOGLE_name");
+        GOOGLE_name.innerHTML = "Google Rating";
 
-      const ratingArea = document.getElementById("rating_area");
-      ratingArea.classList.remove('d-none');
+        // let total_New_rating = total_rating.forEach(new_rating);
+        console.log(`modified_rating = ${modified_rating}`);
+        let New_rating = modified_rating.reduce((accumulator, currentValue) => accumulator + parseFloat(currentValue), 0);
+        New_rating = New_rating / parseFloat(num_rating);
+        New_rating = New_rating.toFixed(1);
+        const NEW_rating = document.getElementById("NEW_rating");
+        NEW_rating.innerHTML = New_rating;
+        const NEW_name = document.getElementById("NEW_name");
+        NEW_name.innerHTML = "New Rating";
 
-      const reviewArea = document.getElementById("horizontal-pricing");
-      reviewArea.classList.remove('d-none');
-    });
+        const ratingArea = document.getElementById("rating_area");
+        ratingArea.classList.remove('d-none');
+
+        const reviewArea = document.getElementById("horizontal-pricing");
+        reviewArea.classList.remove('d-none');
+      });
   }
 })
